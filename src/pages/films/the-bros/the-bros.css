@@ -446,3 +446,9 @@ body {
     margin-top: 40px;
     font-size: 25px;
 }
+
+.Film #watchDiv #thebrosVideo {
+    width: 80vw;
+    height: 400px;
+    max-width: 700px;
+}

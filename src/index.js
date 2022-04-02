@@ -71,23 +71,23 @@ function checkAnimation()
 
   if(isElementInViewport(gamesABOUT))
   {
-    gamesABOUT.classList.add('fadeInAndSlideInLEFT');
+    gamesABOUT.classList.add('fadeInAndComeUp');
   }
   if(isElementInViewport(softwareABOUT))
   {
-    softwareABOUT.classList.add('fadeInAndSlideInRIGHT');
+    softwareABOUT.classList.add('fadeInAndComeUp');
   }
   if(isElementInViewport(filmsABOUT))
   {
-    filmsABOUT.classList.add('fadeIn');
+    filmsABOUT.classList.add('fadeInAndComeUp');
   }
   if(isElementInViewport(newsABOUT))
   {
-    newsABOUT.classList.add('fadeInAndSlideInLEFT');
+    newsABOUT.classList.add('fadeInAndComeUp');
   }
   if(isElementInViewport(aboutABOUT))
   {
-    aboutABOUT.classList.add('fadeInAndSlideInRIGHT');
+    aboutABOUT.classList.add('fadeInAndComeUp');
   }
 }
 
