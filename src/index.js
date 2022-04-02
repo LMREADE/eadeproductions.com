@@ -56,11 +56,11 @@ var filmsABOUT = document.getElementById('filmsABOUT');
 var newsABOUT = document.getElementById('newsABOUT');
 var aboutABOUT = document.getElementById('aboutABOUT');
 
-gamesABOUT.style.opacity = 0;
-softwareABOUT.style.opacity = 0;
-filmsABOUT.style.opacity = 0;
-newsABOUT.style.opacity = 0;
-aboutABOUT.style.opacity = 0;
+// gamesABOUT.style.opacity = 0;
+// softwareABOUT.style.opacity = 0;
+// filmsABOUT.style.opacity = 0;
+// newsABOUT.style.opacity = 0;
+// aboutABOUT.style.opacity = 0;
 
 function checkAnimation()
 {
@@ -69,26 +69,26 @@ function checkAnimation()
     eadeprodabouttext.classList.add('fadeInAndComeUp');
   }
 
-  if(isElementInViewport(gamesABOUT))
-  {
-    gamesABOUT.classList.add('fadeInAndComeUp');
-  }
-  if(isElementInViewport(softwareABOUT))
-  {
-    softwareABOUT.classList.add('fadeInAndComeUp');
-  }
-  if(isElementInViewport(filmsABOUT))
-  {
-    filmsABOUT.classList.add('fadeInAndComeUp');
-  }
-  if(isElementInViewport(newsABOUT))
-  {
-    newsABOUT.classList.add('fadeInAndComeUp');
-  }
-  if(isElementInViewport(aboutABOUT))
-  {
-    aboutABOUT.classList.add('fadeInAndComeUp');
-  }
+  // if(isElementInViewport(gamesABOUT))
+  // {
+  //   gamesABOUT.classList.add('fadeInAndSlideInLEFT');
+  // }
+  // if(isElementInViewport(softwareABOUT))
+  // {
+  //   softwareABOUT.classList.add('fadeInAndSlideInRIGHT');
+  // }
+  // if(isElementInViewport(filmsABOUT))
+  // {
+  //   filmsABOUT.classList.add('fadeIn');
+  // }
+  // if(isElementInViewport(newsABOUT))
+  // {
+  //   newsABOUT.classList.add('fadeInAndSlideInLEFT');
+  // }
+  // if(isElementInViewport(aboutABOUT))
+  // {
+  //   aboutABOUT.classList.add('fadeInAndSlideInRIGHT');
+  // }
 }
 
 var text = document.getElementById('eadeprodintrotext');
