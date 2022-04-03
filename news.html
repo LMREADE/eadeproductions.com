@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>News - Eade Productions</title>
+
+        <link rel="stylesheet" href="news/news.css">
+
+        <link rel="icon" href="images/EadeProductionsLogo-32x32.png" type="image/png" sizes="32x32">
+        <link rel="icon" href="images/EadeProductionsLogo-192x192.png" type="image/png" sizes="192x192">
+        <link rel="icon" href="images/EadeProductionsLogo.ico">
+        <link rel="shortcut icon" href=images/EadeProductionsLogo.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" href="images/EadeProductionsLogo-180x180.png" type="image/png">
+        
+        <meta name="theme-color" content="#000000">
+        <meta name="msapplication-TileColor" content="#000000">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    </head>
+
+    <body>
+
+        <input type="checkbox" id="fullNavbarCheckbox" style="display: none;">
+        <header id="navbar">
+
+            <a href="/" class="noselect"><img id="eadeprodlogo" src="images/EadeProductionsLogo.png" class="noselect"></img></a>
+    
+            <nav id="topnavbar">
+                <ul>
+                    <li class="noselect"> <a href="/" class="noselect">HOME</a> </li>
+                    <li class="noselect"> <a href="games" class="noselect">GAMES</a> </li>
+                    <li class="noselect"> <a href="software" class="noselect">SOFTWARE</a> </li>
+                    <li class="noselect"> <a href="films" class="noselect">FILMS</a> </li>
+                    <li class="noselect"> <a href="news" class="noselect" id="current">NEWS</a> </li>
+                    <li class="noselect"> <a href="about" class="noselect">ABOUT</a> </li>
+                </ul>
+            </nav>
+
+            <div id="line"></div>
+
+            <nav id="fullnavbar">
+                <ul>
+                    <li class="noselect"> <a href="/" class="noselect">HOME</a> </li>
+                    <li class="noselect"> <a href="games" class="noselect">GAMES</a> </li>
+                    <li class="noselect"> <a href="software" class="noselect">SOFTWARE</a> </li>
+                    <li class="noselect"> <a href="films" class="noselect">FILMS</a> </li>
+                    <li class="noselect"> <a href="news" class="noselect" id="current">NEWS</a> </li>
+                    <li class="noselect"> <a href="about" class="noselect">ABOUT</a> </li>
+                </ul>
+            </nav>
+            
+            <label for="fullNavbarCheckbox" id="menuLabel" class="noselect">
+                <div class="menuBarLine" id="top" class="noselect"></div>
+                <div class="menuBarLine" id="middle" class="noselect"></div>
+                <div class="menuBarLine" id="bottom" class="noselect"></div>
+            </label>
+        </header>
+
+        <div id="NewsTitle">
+            <h1>NEWS</h1>
+        </div>
+
+            <div id="ArticlesContainer">
+
+                <a href="news/welcome-to-eade-prod-site">
+                    <div class="ArticlePreview" style="background-image: url(images/EadeProductionsLogo.png); background-size: 200px; background-color: rgb(14, 14, 14); background-position-y: 150px;">
+                        <div id="TitleDiv">
+                            <h1>Welcome to the official Eade Productions website!</h1> 
+                            <p id="ArticleDate">3/4/22</p>
+                            <p id="ArticleNewAlert">*NEW*</p>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+        <div style="width: 100%; height: 60px; z-index: -1; display: flex; align-items: center; justify-content: center; background-color: rgb(10, 10, 10); color: rgb(255, 255, 255); font-family: starfleetFont; font-weight: 100; text-align: center; font-size: .8rem;">
+            <p>eadeproductions.com</p>
+        </div>
+
+        <script src="news/news.js"></script>
+    </body>
+</html>
