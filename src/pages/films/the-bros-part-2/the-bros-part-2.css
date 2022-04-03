@@ -1,6 +1,6 @@
 html {
     background-color: black;
-    color: white;
+    color: black;
     overflow: overlay;
     height: 100%;
     overflow-x: hidden;
@@ -30,11 +30,7 @@ body {
     margin: 0px;
     padding: 0px;
     height: 1200px;
-
-    background-image: url(../../../../images/CloutWorldBackground_DARK.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: white;
 }
 
 @font-face {
@@ -80,12 +76,12 @@ body {
 }
 
 #topnavbar ul li a {
-    color: white;
+    color: black;
     text-decoration: none;
 }
 
 #topnavbar ul li a:hover {
-    color: rgb(200, 200, 200);
+    color: rgb(100, 100, 100);
 }
 
 #eadeprodlogo {
@@ -95,7 +91,7 @@ body {
 }
 
 #eadeprodlogo:hover {
-    filter: brightness(0.75);
+    filter: brightness(10);
 }
 
 #menuLabel {
@@ -117,7 +113,7 @@ body {
     height: 2px;
     width: 100%;
     margin-top: 6px;
-    background-color: white;
+    background-color: black;
     transition: .2s;
 }
 
@@ -245,22 +241,30 @@ body {
         background-color: rgba(0, 0, 0, .75);
     }
 
+    #fullNavbarCheckbox:checked ~ #navbar > #eadeprodlogoLink > #eadeprodlogo {
+        filter: invert();
+    }
+
     #fullNavbarCheckbox:checked ~ #navbar > #line {
         opacity: 1;
+        background-color: gray;
     }
 
     #fullNavbarCheckbox:checked ~ #navbar > #menuLabel > #top{
         transform: translate(-5px, 8px) rotate(45deg);
         margin-left: 5px;
+        background-color: white;
     }
 
     #fullNavbarCheckbox:checked ~ #navbar > #menuLabel > #middle{
         opacity: 0;
+        background-color: white;
     }
 
     #fullNavbarCheckbox:checked ~ #navbar > #menuLabel > #bottom{
         transform: translate(-5px, -8px) rotate(-45deg);
         margin-left: 5px;
+        background-color: white;
     }
 
 
@@ -269,7 +273,18 @@ body {
     }
 }
 
-.Game {
+#titleSeperator {
+    height: 1.5px;
+    width: 60px;
+
+    margin: 25px 0px;
+    margin-bottom: 45px;
+
+    background-color: white;
+    opacity: .5;
+}
+
+.Film {
     margin: 0;
     padding: 0;
 
@@ -281,8 +296,8 @@ body {
     font-weight: 0;
 }
 
-.Game img {
-    max-width: 800px;
+.Film img {
+    max-width: 1500px;
     width: calc(100vw - 120px);
     height: auto;
     
@@ -295,39 +310,43 @@ body {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
 
-    margin-top: 90px;
-    margin-bottom: 10px;
+    margin-top: 40px;
 }
 
-.Game p {
+.Film p {
     max-width: 700px;
     width: calc(100vw - 150px);
     text-align: center;
 
+    margin-top: -13px;
     font-size: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 100px;
 }
 
-.Game #treesDivBlend {
-    width: 100vw;
-    height: 100px;
-
-    margin-top: 120px;
-
-    background-image: url(../../../../images/mountains-texture-grey-top.png);
-    background-position: center;
-    background-size: 800px;
-    background-repeat: repeat-x;
+@media (max-width: 884px) {
+    .Film p {
+        margin-top: 10px;
+    }
 }
 
-.Game #gameAboutDiv {
+.Film #slopeDivBlend {
+    width: 0px;
+    height: 0;
+
+
+    border-bottom: 100px solid rgb(25, 25, 25);
+    border-right: 100vw solid transparent;
+}
+
+.Film #filmAboutDiv {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 
     min-width: 100vw;
-    margin-top: -30px;
+    width: calc(100vw - 100px);
+    max-width: 800px;
 
     background-color: rgb(25, 25, 25);
     position: relative;
@@ -335,42 +354,20 @@ body {
     color: rgb(255, 255, 255);
 }
 
-.Game #gameAboutDiv {
-    width: calc(100vw - 100px);
-    max-width: 800px;
-}
-
-.Game h1 {
+.Film #filmAboutDiv h1 {
     margin-top: 20px;
     font-size: 25px;
 
     text-align: center;
 }
 
-.Game #titleSeperator {
-    height: 1.5px;
-    width: 60px;
-
-    margin: 25px 0px;
-    margin-bottom: 45px;
-
-    background-color: white;
-    opacity: .5;
-}
-
-.Game p {
+.Film #filmAboutDiv p {
     margin: 10px 0px;
 
     text-align: center;
 }
 
-@media (max-width: 884px) {
-    .Game p {
-        margin-top: 20px;
-    }
-}
-
-.Game #gameAboutDiv #gamesAboutSubInfo {
+.Film #filmAboutDiv #filmAboutSubInfo {
     display: flex;
     position: inherit;
     justify-content: center;
@@ -381,21 +378,21 @@ body {
 
 @media (max-width: 884px) {
 
-    .Game #gameAboutDiv #gamesAboutSubInfo {
+    .Film #filmAboutDiv #filmAboutSubInfo {
         flex-direction: column;
     }
 }
 
-.Game #gameAboutDiv #gamesAboutSubInfo .aboutSubInfo {
+.Film #filmAboutDiv #filmAboutSubInfo .aboutSubInfo {
     margin-top: 15px;
     margin-right: 30px;
 }
 
-.Game #gameAboutDiv #gamesAboutSubInfo .aboutSubInfo p {
+.Film #filmAboutDiv #filmAboutSubInfo .aboutSubInfo p {
     display: inline;
 }
 
-.Game #gameAboutDiv #gamesAboutSubInfo .aboutSubInfo #subInfoSTATUS {
+.Film #filmAboutDiv #filmAboutSubInfo .aboutSubInfo #subInfoSTATUS {
     background-color: rgb(114, 114, 114);
     border-radius: 20px;
     
@@ -406,7 +403,7 @@ body {
     font-size: 16px;
 }
 
-.Game #gameGameplayDiv {
+.Film #filmCastCrewDiv {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -421,29 +418,22 @@ body {
     color: rgb(255, 255, 255);
 }
 
-.Game #gameGameplayDiv h1 {
+.Film #filmCastCrewDiv h1 {
     margin-top: 40px;
+    font-size: 25px;
 }
 
-.Game #gameGameplayDiv #gameplayElements {
+.Film #filmCastCrewDiv #castcrewdiv {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 2000px;
-
     flex-wrap: wrap;
+    justify-content: center;
 }
 
-.Game #gameGameplayDiv #gameplayElements .gameplayElement {
-    padding: 0;
-    margin: 20px;
+.Film #filmCastCrewDiv #castcrewdiv #crew p a {
+    color: gray;
 }
 
-.Game #gameGameplayDiv #gameplayElements .gameplayElement p {
-    text-align: left;
-}
-
-.Game #gameScreenshotsDiv {
+.Film #watchDiv {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -453,136 +443,18 @@ body {
 
     background-color: rgb(25, 25, 25);
     position: relative;
-    padding-bottom: 100px;
+    padding-bottom: 85px;
 
     color: rgb(255, 255, 255);
 }
 
-.Game #gameScreenshotsDiv h1 {
+.Film #watchDiv h1 {
     margin-top: 40px;
-}
-
-.Game #gameScreenshotsDiv #screenshotsDiv {
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    flex-wrap: wrap;
-
-    width: 75vw;
-}
-
-.Game #gameScreenshotsDiv #screenshotsDiv img {
-    margin: 20px;
-    width: 400px;
-
-    cursor: pointer;
-}
-
-.Game #gameScreenshotsDiv #screenshotsDiv img:hover {
-    opacity: .75;
-}
-
-#currentFullScreenshot {
-    background-color: rgb(0, 0, 0, 0.5);
-
-    position:fixed;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-
-    z-index: 1;
-    opacity: 0;
-    pointer-events: none;
-    
-    width: 100vw;
-    height: 100vh;
-
-    transition: .1s;
-}
-
-#currentFullScreenshot #eadeloadingicon {
-    border-radius: 150px;
-    width: 150px;
-}
-
-#currentFullScreenshot #screenshot {
-    width: 100vw; 
-    height: 56.25vw; /* 100/56.25 = 1.778 */
-    max-height: 100vh;
-    max-width: 177.78vh; /* 16/9 = 1.778 */
-    margin: auto;
-    position: absolute;
-    top:0;bottom:0; /* vertical center */
-    left:0;right:0; /* horizontal center */
-
-    background-image: url(screenshots/CW_Screenshot_1.png);
-    background-position: center;
-    background-size: cover;
-
-    transform: scale(0.9);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#currentFullScreenshot #screenshot #imageCount {
-    top: 0;
-    right: 0;
-    margin: 20px;
-
-    position: absolute;
-
-    font-family: sanchezRegular;
     font-size: 25px;
-    letter-spacing: 3px;
-
-    opacity: .5;
 }
 
-#currentFullScreenshot #screenshot #closeButton {
-    position: absolute;
-
-    -webkit-backface-visibility: hidden; 
-    backface-visibility: hidden;
-    -ms-transform: translateZ(0);
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-
-    max-height: 60px;
-    margin: 30px;
-
-    left: 0;
-    top: 0;
-
-    transition: .25s;
-    opacity: .5;
-
-    cursor: pointer;
-}
-
-#currentFullScreenshot  #screenshot #closeButton:hover {
-    opacity: 1;
-}
-
-#currentFullScreenshot #screenshot .arrowIcon {
-    position: absolute;
-    cursor: pointer;
-    
-    transition: .15s;
-    opacity: .5;
-
-    height: 80px;
-}
-
-#currentFullScreenshot #screenshot .arrowIcon:hover {
-    opacity: 1;
-}
-
-#currentFullScreenshot #screenshot #arrowLeftIcon {
-    left: 0;
-}
-
-#currentFullScreenshot #screenshot #arrowRightIcon {
-    right: 0;
+.Film #watchDiv #thebrosVideo {
+    width: 80vw;
+    height: 400px;
+    max-width: 700px;
 }

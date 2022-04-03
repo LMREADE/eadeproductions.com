@@ -305,6 +305,12 @@ body {
     margin-bottom: 120px;
 }
 
+@media (max-width: 884px) {
+    .Software p {
+        margin-top: 10px;
+    }
+}
+
 .Software #slopeDivBlend {
     width: 0px;
     height: 0;

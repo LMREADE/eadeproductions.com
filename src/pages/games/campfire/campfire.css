@@ -307,6 +307,12 @@ body {
     margin-bottom: 10px;
 }
 
+@media (max-width: 884px) {
+    .Game p {
+        margin-top: 10px;
+    }
+}
+
 .Game #treesDivBlend {
     width: 100vw;
     height: 100px;
