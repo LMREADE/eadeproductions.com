@@ -1,6 +1,1 @@
-Options +FollowSymLinks -MultiViews
-# Turn mod_rewrite on
-RewriteEngine On
-RewriteBase /
 
-RewriteRule ^src/(.*)$ /$1 [L,NC,R]
