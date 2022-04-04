@@ -7,5 +7,6 @@ RewriteRule ^ %{REQUEST_URI}.html [NC,L]
 
 ErrorDocument 404 /page-not-found/index.html
 
+Options -Indexes
 IndexIgnore *
 
