@@ -1,4 +1,4 @@
-ErrorDocument 404 /404.html
+ErrorDocument 404 /page-not-found/index.html
 
 RewriteEngine on
 RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
