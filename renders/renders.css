@@ -385,8 +385,6 @@ body {
     width: 125px;
     height: 50px;
 
-    display: none;
-
     transform: scale(.8);
 
     border-radius: 7.5px;
@@ -397,8 +395,11 @@ body {
 
     top: 10px;
 
-    display: flex;
+    display: none;
     flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
 }
 
 #currentFullRender #render #renderVideoControls #videoPlayButton {
@@ -407,10 +408,9 @@ body {
 
     cursor: pointer;
 
-    transition: .15s;
+    margin-left: -3px;
 
-    margin-left: 0px;
-    margin-right: 2px;
+    transition: .15s;
 }
 
 #currentFullRender #render #renderVideoControls #videoPlayButton:hover {
@@ -424,9 +424,6 @@ body {
     cursor: pointer;
 
     transition: .15s;
-
-    margin-left: -5px;
-    margin-right: 2px;
     
 }
 

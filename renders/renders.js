@@ -36,7 +36,7 @@ function openRenderVideo(name, date) {
     renderDate.innerText = date;
 
     renderVideo.style.display = 'initial';
-    renderVideoControls.style.display = 'initial';
+    renderVideoControls.style.display = 'flex';
 
     currentRender.style.opacity = '1';
     currentRender.style.pointerEvents = 'all';
