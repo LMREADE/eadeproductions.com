@@ -12,9 +12,11 @@ var renderDate = document.getElementById('renderDate');
 var videoPlayButton = document.getElementById('videoPlayButton');
 var videoSoundButton = document.getElementById('videoSoundButton');
 
+var downloadButtonLink = document.getElementById('downloadButtonLink');
+
 var playingVideo = false;
 
-function openRenderImage(name, date) {
+function openRenderImage(name, date, url) {
     var newName = name.replaceAll(' ', '');
     render.style.backgroundImage = "url(render-images/" + newName + ".png)";
 
@@ -25,9 +27,11 @@ function openRenderImage(name, date) {
 
     currentRender.style.opacity = '1';
     currentRender.style.pointerEvents = 'all';
+
+    downloadButtonLink.href = url;
 }
 
-function openRenderVideo(name, date) {
+function openRenderVideo(name, date, url) {
     var newName = name.replaceAll(' ', '');
     render.style.backgroundImage = '';
     renderVideo.src = "render-images/" + newName + ".mp4";
@@ -40,6 +44,8 @@ function openRenderVideo(name, date) {
 
     currentRender.style.opacity = '1';
     currentRender.style.pointerEvents = 'all';
+
+    downloadButtonLink.href = url;
 }
 
 function closeRender() {

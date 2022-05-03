@@ -500,6 +500,36 @@ body {
     opacity: 1;
 }
 
+#currentFullRender #render #downloadButton {
+    position: absolute;
+
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+    -ms-transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+
+    max-height: 30px;
+    margin: 15px;
+    margin-left: 55px;
+
+    transform: scale(1.1);
+
+    right: 35px;
+    bottom: 0;
+
+    z-index: 2;
+    
+    transition: .25s;
+    opacity: .5;
+
+    cursor: pointer;
+}
+
+#currentFullRender  #render #downloadButton:hover {
+    opacity: 1;
+}
+
 #currentFullRender  #render #aboutPanel {
     background-color: rgba(0, 0, 0, .8);
 
