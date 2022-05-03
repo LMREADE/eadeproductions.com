@@ -21,6 +21,8 @@ function openRenderImage(name, date) {
     renderName.innerText = name;
     renderDate.innerText = date;
 
+    renderVideoControls.style.display = 'none';
+
     currentRender.style.opacity = '1';
     currentRender.style.pointerEvents = 'all';
 }
