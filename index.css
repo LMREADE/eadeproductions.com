@@ -9,6 +9,7 @@ html {
 ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
+    scroll-padding: 10px;
     background: rgba(0,0,0,0);
 }
    
@@ -73,7 +74,7 @@ body {
     list-style: none;
 
     line-height: 60px;
-    margin-right: 15vw;
+    margin-right: 8vw;
 }
 
 #topnavbar ul li {
@@ -244,7 +245,7 @@ body {
     }
 
     #fullNavbarCheckbox:checked ~ #navbar {
-        height: 510px;
+        height: 580px;
     }
 
     #fullNavbarCheckbox:checked ~ #navbar > #line {
