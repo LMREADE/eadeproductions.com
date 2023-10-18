@@ -1,0 +1,671 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@800&display=swap');
+
+:root {
+    color-scheme: dark;
+}
+
+html {
+    background-color: rgb(12, 9, 12);
+    color: white;
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Roboto Mono', monospace;
+    font-weight: lighter;
+}
+
+::selection {
+    background-color: gray;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#AboutSection{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 800px;
+
+    background: rgb(12, 9, 12);
+    background-image: url(images/noise-light.png);
+
+}
+
+#EadeProductionsTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+}
+
+#EadeProductionsTitle h1 {
+    padding: 0;
+    margin: 0;
+
+    font-size: 20px;
+    padding-left: 20px;
+    font-weight: lighter;
+}
+
+#EadeProductionsTitle img {
+    padding: 0;
+    margin: 0;
+
+    transform: translate(0px, 2px);
+
+    width: 50px;
+    height: 50px;
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#EadeProductionsAbout {
+    padding: 0;
+    margin: 0;
+
+    width: 100%;
+    height: 100%;
+
+    margin-top: -130px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+#EadeProductionsAbout #ParagraphContainer {
+    margin: 0;
+    padding: 25px;
+
+    width: min(500px, 60vw);
+    height: auto;
+
+    text-align: left;
+
+    border: solid 2px;
+    border-radius: 15px;
+}
+
+#EadeProductionsAbout p {
+    padding: 0;
+    margin: 0;
+}
+
+#EadeProductionsAbout #FromMessage {
+    padding-top: 20px;
+}
+
+#RendersSection {
+    padding: 50px 100px;
+    width: calc(100%  - 200px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+#RendersSection h1 {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: lighter;
+
+    font-size: 50px;
+    margin-left: 75px;
+}
+
+#RendersGrid {
+    margin: 0;
+    padding: 0;
+
+    margin-top: 40px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#RendersGrid img {
+    margin: 10px;
+    padding: 0;
+
+    width: min(350px, 75vw);
+    height: min(350px, 75vw);
+
+    transition: transform .15s;
+
+    border-radius: 12.5px;
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#RendersGrid img:hover {
+    transform: scale(1.05, 1.05);
+    cursor:pointer;
+}
+
+#CurrentRenderDiv {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: lighter;
+
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1;
+}
+
+#CurrentRenderDiv #Render {
+    border: solid rgb(107, 107, 107) 1px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 100px rgb(92, 92, 92);
+
+    overflow: hidden;
+
+    position: relative;
+
+    flex-shrink: 0;
+    
+    width: 90vmin;
+    height: 90vmin;
+
+    object-fit:contain;
+
+    padding: 0;
+    margin: 0;
+}
+
+#CurrentRenderDiv #Render #MuteToggleBackground {
+    margin: min(3vmin, 30px);
+    padding: min(2vmin, 10px);
+
+    top: 0;
+    left: 0;
+
+    z-index: 1;
+
+    height: min(5vmin, 25px);
+    width: min(5vmin, 25px);
+
+    position: absolute;
+
+    border: solid white 2px;
+    border-radius: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#CurrentRenderDiv #Render #MuteToggleBackground:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+#CurrentRenderDiv #Render #MuteToggleBackground:hover #MuteToggle {
+    filter: brightness(0);
+}
+
+#CurrentRenderDiv #Render #MuteToggle {
+    padding: 0;
+    margin: 0;
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+
+    pointer-events: none;
+}
+
+#CurrentRenderDiv #Render #CloseRenderBackground {
+    margin: min(3vmin, 30px);
+    padding: min(2vmin, 10px);
+
+    top: 0;
+    right: 0;
+
+    z-index: 1;
+
+    height: min(5vmin, 25px);
+    width: min(5vmin, 25px);
+
+    position: absolute;
+
+    border: solid white 2px;
+    border-radius: 30px;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+#CurrentRenderDiv #Render #CloseRenderBackground:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+#CurrentRenderDiv #Render #CloseRenderBackground:hover #CloseRender {
+    filter: brightness(0);
+}
+
+#CurrentRenderDiv #Render #CloseRender {
+    padding: 0;
+    margin: 0;
+
+    transform: scale(.75);
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+
+    pointer-events: none;
+}
+
+#CurrentRenderDiv #Render #OpenInfoBackground {
+    margin: min(3vmin, 30px);
+    padding: min(2vmin, 10px);
+
+    bottom: 0;
+    right: 0;
+
+    z-index: 1;
+
+    height: min(5vmin, 25px);
+    width: min(5vmin, 25px);
+
+    position: absolute;
+
+    border: solid white 2px;
+    border-radius: 30px;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+#CurrentRenderDiv #Render #OpenInfoBackground:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+#CurrentRenderDiv #Render #OpenInfoBackground:hover #OpenInfo {
+    filter: brightness(0);
+}
+
+#CurrentRenderDiv #Render #OpenInfo {
+    padding: 0;
+    margin: 0;
+
+    width: 100%;
+    height: 100%;
+
+    transform: scale(1.25);
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+
+    pointer-events: none;
+}
+
+
+#CurrentRenderDiv #Render #CurrentRenderImage {
+    padding: 0;
+    margin: 0;
+
+    width: 100%;
+    height: 100%;
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+
+    background-size: cover;
+}
+
+#CurrentRenderDiv #Render #CurrentRenderVideo {
+    padding: 0;
+    margin: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: none;
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#CurrentRenderDiv #CurrentRenderAboutPanel {
+    width: 50vmin;
+    height: 90vmin;
+    
+    flex-shrink: 0;
+
+    background: rgb(0, 0, 0);
+    background-image: 
+    url(images/noise-light.png),
+    radial-gradient(at 96% 31%, rgb(94, 37, 37) 0px, transparent 50%),
+    radial-gradient(at 36% 100%, rgb(49, 25, 47) 0px, transparent 50%);
+    
+    border-radius: 15px;
+    
+    border: solid rgb(107, 107, 107) 1px;
+    
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    
+    margin: 0;
+    padding: 0;
+    margin-left: 1vw;
+}
+
+#CurrentRenderDiv #CurrentRenderAboutPanel #Top {
+    display: flex;
+    justify-content:baseline;
+    align-items:start;
+
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    margin: min(3vmin, 30px) min(4vmin, 40px);
+}
+
+#CurrentRenderDiv #CurrentRenderAboutPanel #Top #RenderTitle {
+    font-size: min(20vmin, 50px);
+
+    margin: 0;
+    padding: 0;
+
+    width: calc(90% - 2vmin);
+
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: lighter;
+}
+
+#CurrentRenderDiv #CurrentRenderAboutPanel #Top .RenderInfoCard {
+    font-size: min(5vmin, 16px);
+    font-style: italic;
+    color: gray;
+    margin: 0;
+    padding: min(.5vmin, 3px) min(1.7vmin, 12px);
+
+    margin-top: min(.5vmin, 5px);
+
+    border: solid rgb(88, 88, 88);
+    border-radius: 20px;
+
+    font-family: 'Roboto Mono', monospace;
+    font-weight: lighter;
+}
+
+#CurrentRenderDiv #CurrentRenderAboutPanel #Top #RenderResolution {
+    color: rgb(109, 109, 109);
+    margin-left: min(1vmin, 10px);
+
+    border-color: rgb(61, 61, 61);
+}
+
+#CurrentRenderDiv #CurrentRenderAboutPanel #Top #RenderDate::selection {
+    background-color: rgb(185, 185, 185);
+}
+
+#CurrentRenderDiv #CurrentRenderAboutPanel #Top #RenderResolution::selection {
+    background-color: rgb(185, 185, 185);
+}
+
+#CurrentRenderDiv #CurrentRenderAboutPanel #Fill {
+    height: auto;
+    flex-grow: 1;
+}
+
+#CurrentRenderDiv #CurrentRenderAboutPanel #Bottom {
+    margin: 0;
+    padding: 0;
+
+    margin: min(3vmin, 30px) min(4vmin, 40px);
+
+    display: flex;
+    align-items: center;
+}
+
+#CurrentRenderDiv #CurrentRenderAboutPanel #Bottom h1 {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+
+    font-size: min(20px, 3.5vmin);
+
+    font-family: 'Roboto Mono', monospace;
+    font-weight: lighter;
+
+    white-space: nowrap;
+}
+
+#CurrentRenderDiv #CurrentRenderAboutPanel #Bottom #MadeInBlender {
+    color: gray;
+    margin-left: min(1.1vmin, 11px);
+
+}
+
+#CurrentRenderDiv #CurrentRenderAboutPanel #Bottom #MadeInBlender::selection {
+    background-color: rgb(185, 185, 185);
+}
+
+#CurrentRenderDiv #CurrentRenderAboutPanel #Bottom #BlenderLogo {
+    margin: 0px;
+    padding: 0px;
+
+    margin-left: min(0.75vmin, 7.5px);
+
+    height: min(2.7vmin, 27px);
+    width: min(2.7vmin, 27px);
+
+    transform: translateY(min(0.1vh, 1px));
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+
+    filter: brightness(.4);
+}
+
+#CurrentRenderDiv #CurrentRenderAboutPanel #CloseButtonBackground {
+    margin: 0;
+    padding: min(2vmin, 10px);
+
+    top: min(3vmin, 30px);
+    right: min(3vmin, 30px);
+
+    height: min(5vmin, 25px);
+    width: min(5vmin, 25px);
+
+    position: absolute;
+
+    border: solid white 2px;
+    border-radius: 30px;
+
+    pointer-events: initial;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#CurrentRenderDiv #CurrentRenderAboutPanel #CloseButtonBackground:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+#CurrentRenderDiv #CurrentRenderAboutPanel #CloseButtonBackground:hover #CloseButton {
+    filter: brightness(0);
+}
+
+
+#CurrentRenderDiv #CurrentRenderAboutPanel #CloseButton {
+    padding: 0;
+    margin: 0;
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+
+    transform: scale(.75);
+
+    pointer-events: none;
+}
+
+#CurrentRenderDiv #CurrentRenderAboutPanel #DownloadButtonBackground {
+    margin: 0;
+    padding: min(2vmin, 10px);
+
+    position: absolute;
+    bottom: min(3vmin, 30px);
+    right: min(3vmin, 30px);
+
+    height: min(5vmin, 25px);
+    width: min(5vmin, 25px);
+
+    border: solid white 2px;
+    border-radius: 30px;
+
+    pointer-events: initial;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#CurrentRenderDiv #CurrentRenderAboutPanel #DownloadButtonBackground:hover {
+    background-color: white;
+}
+
+#CurrentRenderDiv #CurrentRenderAboutPanel #DownloadButtonBackground:hover #DownloadButton {
+    filter: brightness(0);
+}
+
+#CurrentRenderDiv #CurrentRenderAboutPanel #DownloadButton {
+    padding: 0;
+    margin: 0;
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+
+    transform: scale(0.75);
+
+    pointer-events: none;
+}
+
+@media (max-width:180vh) {
+    #CurrentRenderDiv #CurrentRenderAboutPanel {
+        position: absolute;
+        width: 90vmin;
+        height: 90vmin;
+        background-color:rgba(0, 0, 0, 0.9);
+
+        z-index: 2;
+
+        display: none;
+
+        margin: 0;
+    }
+
+    #RendersSection {
+        align-items: center;
+    }
+    
+    #RendersSection h1 {
+        margin-left: 0px;
+    }
+
+    #CurrentRenderDiv #CurrentRenderAboutPanel #CloseButtonDiv {
+        width: 90vmin;
+    }
+
+    #CurrentRenderDiv #CurrentRenderAboutPanel #DownloadButtonDiv {
+        width: 90vmin;
+    }
+
+    #CurrentRenderDiv #Render #CloseRenderBackground {
+        display: flex;
+    }
+    
+    #CurrentRenderDiv #Render #OpenInfoBackground {
+        display: flex;
+    }
+}
+
+@media (min-width:180vh) {
+    #CurrentRenderDiv #CurrentRenderAboutPanel {
+        display: flex;
+    }
+}
+
+@media (max-width:135vh)  {
+    #CurrentRenderDiv .LandscapeClass {
+        width: 90vmin!important;
+        height: 51vmin!important;
+    }
+}
+
+@media (max-width:150vh) {
+}
+
+#footer {
+    width: 100%;
+    height: 50px;
+
+    background-color: rgb(0, 0, 0);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 100;
+
+    font-size: 5px;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        
+        <title>Eade Productions</title>
+        <link rel="stylesheet" href="index.css">
+
+        <link rel="icon" href="images/WebsiteIcon32.png" type="image/png" sizes="32x32">
+        <link rel="icon" href="images/WebsiteIcon192.png" type="image/png" sizes="192x192">
+        <link rel="icon" href="images/WebsiteIcon.ico">
+        <link rel="shortcut icon" href="images/WebsiteIcon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" href="images/WebsiteIcon180.png" type="image/png">
+
+        <meta name="theme-color" content="#000000">
+        <meta name="msapplication-TileColor" content="#000000">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+
+    <body>
+
+        <div id="CurrentRenderDiv">
+
+            <div id="Render">
+
+                <div id="MuteToggleBackground" onclick="ToggleMute()">
+                    <img id="MuteToggle" src="svgs/SoundIcon.svg" draggable="false">
+                </div>
+
+                <div id="CloseRenderBackground" onclick="CloseRenderONLY()">
+                    <img id="CloseRender" src="svgs/CloseIcon.svg" draggable="false">
+                </div>
+
+                <div id="OpenInfoBackground" onclick="OpenInfo()">
+                    <img id="OpenInfo" src="images/AboutIcon.png" draggable="false">
+                </div>
+
+                <img id="CurrentRenderImage" loading="lazy" draggable="false" oncontextmenu="return false;">
+                <video id="CurrentRenderVideo" loading="lazy" draggable="false" loop="true" autoplay="true" oncontextmenu="return false;"></video>
+            </div>
+
+            <div id="CurrentRenderAboutPanel">
+
+                <div id="Top">
+                    <h1 id="RenderTitle">THE LIFEGUARD</h1>
+                    <div style="display: flex;">
+                        <h1 class="RenderInfoCard" id="RenderDate">07/10/202305</h1>
+                        <h1 class="RenderInfoCard" id="RenderResolution">1080x1080</h1>
+                    </div>
+                </div>
+
+                <div id="Fill"></div>
+
+                <div id="Bottom">
+                    <h1 id="RenderBy">By Leo Eade<a id="MadeInBlender">in Blender</a></h1>
+                    <img id="BlenderLogo" oncontextmenu="return false;" draggable="false" src="images/BlenderLogo.png"></h1>
+                </div>
+
+                <div id="CloseButtonBackground" onclick="CloseRender()">
+                    <img id="CloseButton" oncontextmenu="return false;" draggable="false" src="svgs/CloseIcon.svg">
+                </div>
+
+                <a id="DownloadLink" href="/renders/TheLifeguard.png" download>
+                    <div id="DownloadButtonBackground">
+                        <img id="DownloadButton" oncontextmenu="return false;" draggable="false" src="svgs/DownloadIcon.svg">
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+        <section id="AboutSection">
+
+            <div id="EadeProductionsTitle">
+                <img src="images/EadeProductionsLogo.png" draggable="false"/>
+            </div>
+
+            <div id="EadeProductionsAbout">
+                <div id="ParagraphContainer">
+                    <p>Hello, I've decided to redesign the website, as I think it needs a bit of a refresh. I've also decided to remove all of the other things, most of which were just jokes. I'll probably add back the tabs if I make anything new, but for now, this will just be home to my renders because I think those are pretty cool. Thanks for stopping by.</p>
+                    <p id="FromMessage">- Leo Eade, CEO of Eade Productions</p>
+                </div>
+            </div>
+            
+        </section>
+
+        <div style="height: 2px; background-color: rgb(121, 121, 121);"></div>
+
+        <section id="RendersSection">
+
+            <h1 id="RendersTitleText">RENDERS</h1>
+
+            <div id="RendersGrid">
+                <img src="renders/thumbails/TheLifeguard_Thumbnail.jpg" draggable="false" oncontextmenu="return false;" onclick="OpenRender('renders/TheLifeguard.png', 'THE LIFEGUARD', '26/03/2021', '1080x1080', 'https://drive.google.com/uc?export=download&id=1kDuekhOL9RZYFkwIPo3cwtRf21Yb9lOV', 'false')"/>
+                <img src="renders/thumbails/TheImpossible_Thumbnail.jpg" draggable="false" oncontextmenu="return false;" onclick="OpenRender('renders/TheImpossible.png', 'THE IMPOSSIBLE', '27/03/2021', '1080x1080', 'https://drive.google.com/uc?export=download&id=1QQNlIhrHsJfLB0c9RX9Qxk7hZRp5DXqj', 'false')"/>
+                <img src="renders/thumbails/TheMemorial_Thumbnail.jpg" draggable="false" oncontextmenu="return false;" onclick="OpenRender('renders/TheMemorial.png', 'THE MEMORIAL', '14/07/2021', '1080x1080', 'https://drive.google.com/uc?export=download&id=1Ls5Dqvs8qab23vTCxt0RPABMjT9SSDKn', 'false')"/>
+                <img src="renders/thumbails/TheAlone_Thumbnail.jpg" draggable="false" oncontextmenu="return false;" onclick="OpenRender('renders/TheAlone.png', 'THE ALONE', '18/10/2021', '1080x1080', 'https://drive.google.com/uc?export=download&id=1BKgUVqXFBeA1jTmB4KPFpDBqjMzqz7fm', 'false')"/>
+                <img src="renders/thumbails/TheThree_Thumbnail.jpg" draggable="false" oncontextmenu="return false;" onclick="OpenRender('renders/TheThree.png', 'THE THREE', '20/10/2021', '1080x1080', 'https://drive.google.com/uc?export=download&id=1YUbgdpLJDTtXtpozW2TcqTxpeJagoCeO', 'false')"/>
+                <img src="renders/thumbails/TheGlow_Thumbnail.jpg" draggable="false" oncontextmenu="return false;" onclick="OpenRender('renders/TheGlow.png', 'THE GLOW', '21/10/2021', '1080x1080', 'https://drive.google.com/uc?export=download&id=1dyrke8U7xm_uCwO56N5Msfxe7CY0gVQD', 'false')"/>
+                <img src="renders/thumbails/TheFountain_Thumbnail.jpg" draggable="false" oncontextmenu="return false;" onclick="OpenRender('renders/TheFountain.png', 'THE FOUNTAIN', '22/10/2021', '1080x1080', 'https://drive.google.com/uc?export=download&id=15Hh3v7W6Igwez2YUeiMLdTok-Y3NV6Xp', 'false')"/>
+                <img src="renders/thumbails/TheDecision_Thumbnail.jpg" draggable="false" oncontextmenu="return false;" onclick="OpenRender('renders/TheDecision.png', 'THE DECISION', '23/10/2021', '1080x1080', 'https://drive.google.com/uc?export=download&id=1j8KWafRGtwuTrO-B_0ioH1VZuHwZ8IMq', 'false')"/>
+                <img src="renders/thumbails/TheFall_Thumbnail.jpg" draggable="false" oncontextmenu="return false;" onclick="OpenRender('renders/TheFall.png', 'THE FALL', '24/10/2021', '1080x1080', 'https://drive.google.com/uc?export=download&id=1Ia7UllxUX0CEHO8Y73rzF8A2_ZWaGEMD', 'false')"/>
+                <img src="renders/thumbails/TheDelicate_Thumbnail.jpg" draggable="false" oncontextmenu="return false;" onclick="OpenRender('renders/TheDelicate.png', 'THE DELICATE', '25/10/2021', '1080x1080', 'https://drive.google.com/uc?export=download&id=1jqw_UMQLsFuXS5ntZtGKb-YKhNw8WJJC', 'false')"/>
+                <img src="renders/thumbails/TheDestruction_Thumbnail.jpg" draggable="false" oncontextmenu="return false;" onclick="OpenRender('renders/TheDestruction.png', 'THE DESTRUCTION', '12/11/2021', '3840x2160', 'https://drive.google.com/uc?export=download&id=1jmAoWDtosGW1EjHss0XvIaL-pqgxgOMi', 'true')"/>
+                <img src="renders/thumbails/HereComesTheSun_Thumbnail.jpg" draggable="false" oncontextmenu="return false;" onclick="OpenRender('renders/HereComesTheSun.png', 'HERE COMES THE SUN', '18/11/2021', '1080x1080', 'https://drive.google.com/uc?export=download&id=1dVZcR-pWJ7umSpL6IMVie4BoRySMWI6d', 'false')"/>
+                <img src="renders/thumbails/TheView_Thumbnail.jpg" draggable="false" oncontextmenu="return false;" onclick="OpenRender('renders/TheView.png', 'THE VIEW', '21/11/2021', '1080x1080', 'https://drive.google.com/uc?export=download&id=1WE0l1h8renJugPeW2jTcMVMIGzy0w8kD', 'false')"/>
+                <img src="renders/thumbails/TheCity_Thumbnail.jpg" draggable="false" oncontextmenu="return false;" onclick="OpenRender('renders/TheCity.png', 'THE CITY', '21/11/2021', '1080x1080', 'https://drive.google.com/uc?export=download&id=1jMBk0MGZ7mY0fEHgLYZQFn-k_Uqga5me', 'false')"/>
+                <img src="renders/thumbails/TheBoat_Thumbnail.jpg" draggable="false" oncontextmenu="return false;" onclick="OpenRender('renders/TheBoat.mp4', 'THE BOAT', '02/05/2022', '1080x1080', 'https://drive.google.com/uc?export=download&id=1Cmtm5o3hn86ikycLA6WGWSoVHZEcuLUV', 'false', 'true', 'true')"/>
+                <img src="renders/thumbails/ThePlane_Thumbnail.jpg" draggable="false" oncontextmenu="return false;" onclick="OpenRender('renders/ThePlane.png', 'THE PLANE', '15/05/2022', '1080x1080', 'https://drive.google.com/uc?export=download&id=1LzPf1_UVgER3zVpUmOFZFHFK_TBqjQ_f', 'false')"/>
+                <img src="renders/thumbails/TheBoardwalk_Thumbnail.jpg" draggable="false" oncontextmenu="return false;" onclick="OpenRender('renders/TheBoardwalk.mp4', 'THE BOARDWALK', '22/05/2022', '1080x1080', 'https://drive.google.com/uc?export=download&id=1Vfyf8E812iNBvofP-LpbiK2KNzRf7QJ9', 'false', 'true')"/>
+                <img src="renders/thumbails/TheSpotlight_Thumbnail.jpg" draggable="false" oncontextmenu="return false;" onclick="OpenRender('renders/TheSpotlight.png', 'THE SPOTLIGHT', '12/06/2022', '1080x1080', 'https://drive.google.com/uc?export=download&id=1wQjLk6l4oAzmb7zsNZd6Ccp5CAqNyPhL', 'false')"/>
+                <img src="renders/thumbails/TheTraveller_Thumbnail.jpg" draggable="false" oncontextmenu="return false;" onclick="OpenRender('renders/TheTraveller.png', 'THE TRAVELLER', '24/07/2022', '1080x1080', 'https://drive.google.com/uc?export=download&id=10_qZZHnaFcVgxQzL1Y9RLF74bjusMpmm', 'false')"/>
+                <img src="renders/thumbails/TheEyes_Thumbnail.jpg" draggable="false" oncontextmenu="return false;" onclick="OpenRender('renders/TheEyes.png', 'THE EYES', '7/12/2022', '1080x1080', 'https://drive.google.com/uc?export=download&id=16EJ78Pwgn8PETciow3HBBx4YmvNiiRKC', 'false')"/>
+            </div>
+
+        </section>
+
+        <div id="footer">
+            <h1>EADE PRODUCTIONS © 2023</h1>
+        </div>
+        
+    </body>
+
+    <script src="index.js"></script>
+
+</html>
